@@ -30,6 +30,8 @@ class Monkey():
     def processItem(self, item):
         # Increment number of items processed
         self.numItemsProcessed += 1
+        
+        # Set operation value based on current value or fixed value
         if self.opVal == 'old':
             val = item
         else:
@@ -53,12 +55,12 @@ class Monkey():
             return [item % LCM, self.fMonkey]
 
     def processAllItems(self):
-        passItems = []
+        toPass = []
         for item in self.items:
-            passItems.append(self.processItem(item))
+            toPass.append(self.processItem(item))
         self.items = []
         
-        return passItems
+        return toPass
         
 
 def passItems(toPass):
@@ -116,5 +118,5 @@ for i in range(len(monkeys)):
     mNums.append(monkeys[i].numItemsProcessed)
 mNums.sort()
 monkeyBusiness = mNums[len(mNums)-1]*mNums[len(mNums)-2]
-print(f'MonkeyBusiness score = {monkeyBusiness}')
+print(f'Part {Part} MonkeyBusiness score = {monkeyBusiness}')
                 
