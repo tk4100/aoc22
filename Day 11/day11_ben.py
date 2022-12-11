@@ -102,7 +102,7 @@ for monkey in monkeys:
 
 # Run 20/10000 rounds
 for i in range(numRounds):
-    print(f'Running round {i}!')
+    print(f'Running round {i+1}')
     # Run each monkey in order per round
     for j in range(len(monkeys)):
         #print(f'   Running Monkey {j}')
